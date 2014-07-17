@@ -53,7 +53,8 @@
     width: 0 !important;
   }
   img{
-
+    height: 100%;
+    
     @supports not (flex-wrap: wrap) {
       display: inline-block !important;
     }
