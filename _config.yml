@@ -1,0 +1,12 @@
+name: slightly tyler
+url: slightlytyler.com
+markdown: redcarpet
+pygments: true
+
+navigation:
+- text: Work
+  url: /
+- text: About
+  url: /about
+- text: Resume
+  url: /resume

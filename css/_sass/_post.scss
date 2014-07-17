@@ -1,0 +1,118 @@
+.post{
+  text-align: center;
+}
+
+.info{
+  max-width: 600px !important;
+  @include outer-container;
+  margin-bottom: em(28);
+  padding: 0 em(8);
+
+  h1{
+    font-size: em(21);
+    text-transform: uppercase;
+    letter-spacing: .25em;
+
+  }
+
+  p{
+    font-weight: 100;
+    color: $body;
+    line-height: em(21);
+
+    a{
+      color: $theme !important;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+
+  h2{
+    font-size: em(14);
+    @include body;
+  }
+}
+
+.pieces{
+  @include inset-shadow;
+  @include outer-container;
+  background-color: $eggshell-2;
+  max-width: 100%;
+
+  @include flex;
+  @include flex-flow(row,wrap);
+  @include flex-justify(center);
+
+  @supports not (flex-wrap: wrap) {
+    text-align: center;
+  }
+
+  &:before,&:after{
+    width: 0 !important;
+  }
+  img{
+
+    @supports not (flex-wrap: wrap) {
+      display: inline-block !important;
+    }
+
+    @include span-columns(12);
+    @include omega(1n);
+
+    @include media($break-m){
+      @include omega-reset(1n);
+      @include span-columns(6);
+      @include omega(2n);
+    }
+  }
+}
+
+.with-pad{
+  padding: em(14) em(28);
+}
+
+.without-pad{
+  padding: 0 em(28) em(14) em(28)
+}
+
+.seperate{
+  img{
+    margin-bottom: em(28);
+  }
+}
+
+.track{
+  height: em(224);
+  margin-bottom: em(28);
+  display: inline-block !important;
+  float: none !important;
+
+  @include span-columns(12);
+  @include omega(1n);
+  &:first-child{
+    margin-top: em(28);
+  }
+
+  @include media($break-m){
+    @include omega-reset(1n);
+    @include span-columns(6);
+    @include omega(2n);
+
+    &:nth-child(-n+2){
+    margin-top: em(28);
+  }
+  }
+
+  @include media($break-l){
+    @include omega-reset(2n);
+    @include span-columns(4);
+    @include omega(3n);
+
+    &:nth-child(-n+3){
+    margin-top: em(28);
+  }
+  }
+
+}

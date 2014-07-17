@@ -1,0 +1,44 @@
+---
+layout: default
+title: Your New Jekyll Site
+---
+
+<div class="content-wrapper">
+
+  <ul class="content">
+    {% for post in site.posts %}
+      <li>
+
+        <section class="preview">
+          <a href="{% if post.link == nil %}{{ post.url }}{% else %}http://{{ post.link }}{% endif %}">
+            <img src="{{ post.featured-image }}"/>
+          </a>
+        </section>
+
+        <section class="description">
+
+          <h1>{{ post.title }}</h1>
+
+          {{ post.content }}
+
+          <div class="types">
+          {% for type in post.type %}
+
+            {% if forloop.last %}
+              <a>{{ type }}</a>
+            {% else %}
+              <a>{{ type }} - </a>
+            {% endif %}
+
+          {% endfor %}
+          </div>
+
+          <span class="btw-wrap">
+            <button onClick=window.location="{% if post.link == nil %}{{ post.url }}{% else %}http://{{ post.link }}{% endif %}" class="btn btn-right view">View {{ post.link-tag }}</button>
+          </span>
+        </section>
+
+      </li>
+    {% endfor %}
+  </ul>
+</div>

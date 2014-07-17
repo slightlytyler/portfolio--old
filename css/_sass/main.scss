@@ -1,0 +1,51 @@
+@import "bourbon";
+
+@import "neat";
+
+@import "grid-settings";
+
+@import "mixins";
+
+@import "global";
+
+// Body{
+
+html, body{
+  overflow-x: hidden;
+  width: 100%;
+}
+body{
+  @include body;
+  margin: 0;
+  color: $dark;
+  webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 { 
+  @include title;
+}
+
+.content-wrapper{
+
+}
+
+// Header
+
+@import "header";
+
+// Index
+
+@import "index";
+
+// Posts
+
+@import "post";
+
+// About 
+
+@import "about";
+
+// Footer
+
+@import "footer";

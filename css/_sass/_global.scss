@@ -1,0 +1,245 @@
+// Breakpoints
+
+$break-min: 240px;
+$break-xs: 320px;
+$break-s: 640px;
+$break-m: 768px;
+$break-l: 1024px;
+$break-xl: 1400px;
+
+// Global Variables
+
+// Colors
+
+$theme: #3399cc;
+$dark: #444343;
+$body: tint($dark, 20%);
+$grey-1: #ddd;
+$eggshell: #f4f4f4;
+$eggshell-2: #f7f7f7;
+
+// Mask
+
+// Rules
+
+*:focus {
+    outline: none;
+}
+
+// Fonts
+
+ @mixin title{
+    font-family: 'Raleway', sans-serif;
+ }
+
+ @mixin body{
+    font-family: 'Lato', sans-serif;
+ }
+
+ // Fixes
+
+ a{
+  color: inherit;
+  text-decoration: inherit;
+ }
+
+ ul{
+  text-align: center;
+  list-style: inherit;
+  padding: 0;
+  margin: 0;
+ }
+
+ img{
+  width: 100%;
+ }
+
+ // Icons
+
+@font-face {
+  font-family: 'icomoon';
+  src: url(../assets/icons/icomoon.svg);
+  src: url(../assets/icons/icomoon.eot) format('embedded-opentype'),
+       url(../assets/icons/icomoon.woff) format('woff'),
+       url(../assets/icons/icomoon.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'portfolio';
+  src: url(../assets/icons/portfolio.svg);
+  src: url(../assets/icons/portfolio.eot) format('embedded-opentype'),
+       url(../assets/icons/portfolio.woff) format('woff'),
+       url(../assets/icons/portfolio.ttf) format('truetype');
+}
+
+.icon-mail:before { font-family: 'portfolio'; content: '\e805'; } /* '' */
+.icon-github:before { font-family: 'portfolio'; content: '\e803'; } /* '' */
+.icon-linkedin:before { font-family: 'portfolio'; content: '\e807'; } /* '' */
+.icon-instagram:before { font-family: 'portfolio'; content: '\e806'; } /* '' */
+.icon-behance:before { font-family: 'portfolio'; content: '\e808'; } /* '' */
+
+// Button
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'icomoon';
+        src: url(../assets/icons/icomoon.svg) format('svg');
+    }
+}
+
+.btn {
+  background: none;
+  cursor: pointer;
+  outline: none;
+  width: auto;
+  min-width: 200px;
+  border-radius: 50px;
+  border: 3px solid $grey-1;
+  overflow: show;
+
+  font-size: em(12);
+  white-space: nowrap;
+  font-family: inherit;
+  color: $grey-1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  
+  position: relative;
+  display: inline-block;
+  padding: em(13) em(56);
+  margin: em(15) auto;
+  
+  @include transition(all, .3s);
+  @include transition-delay(2s);
+  
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  @include transition(all, .3s);
+}
+
+.btn-right:before {
+  content: "\e601";
+  font-family: 'icomoon';
+  position: absolute;
+  height: 100%;
+  font-size: 125%;
+  line-height: 2.3;
+  color: $dark;
+  @include transition(all, .3s);
+  @include transition-delay(2s);
+  left: 78%;
+  opacity: 0;
+  top: 0;
+}
+
+.btn-up:before {
+  content: "\e600";
+  font-family: 'icomoon';
+  position: absolute;
+  height: 100%;
+  font-size: 125%;
+  line-height: 2.3;
+  color: $dark;
+  @include transition(all, .3s);
+  @include transition-delay(2s);
+  left: 78%;
+  opacity: 0;
+  top: 0;
+}
+
+.btn-down:before {
+  content: "\e602";
+  font-family: 'icomoon';
+  position: absolute;
+  height: 100%;
+  font-size: 125%;
+  line-height: 2.3;
+  color: $dark;
+  @include transition(all, .3s);
+  @include transition-delay(2s);
+  top: -8%;
+  left: 83%;
+  opacity: 0;
+  top: 0;
+}
+
+.btn:active {
+  border-color: $dark;
+  color: $dark;
+}
+
+
+.btn:active:before {
+  color: $dark;
+}
+
+.btn{
+    color: $dark;
+    border-color: $dark;
+}
+
+.btn-right:before {
+  left: 83%;
+  opacity: 1;
+}
+
+.btn-down:before {
+  top: 0%;
+  opacity: 1;
+}
+
+.btn-up:before {
+  top: 0%;
+  opacity: 1;
+}
+
+@include media($break-s){
+  .btn{
+    color: $grey-1;
+    border-color: $grey-1;
+  }
+
+  .btn-right:before {
+  left: 75%;
+  opacity: 0;
+  }
+
+  .btn-down:before {
+  top: -15%;
+  opacity: 0;
+  }
+
+  .btn-up:before {
+  top: 15%;
+  opacity: 0;
+  }
+}
+
+.btn:hover{
+  color: $dark;
+  border-color: $dark;
+  @include transition-delay(0s);
+}
+
+.btn-right:hover:before {
+  left: 83%;
+  opacity: 1;
+  @include transition-delay(0s);
+}
+
+.btn-down:hover:before {
+  top: 0%;
+  opacity: 1;
+  @include transition-delay(0s);
+}
+
+.btn-up:hover:before {
+  top: 0%;
+  opacity: 1;
+  @include transition-delay(0s);
+}
