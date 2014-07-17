@@ -143,13 +143,13 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/assets\/Crooked\/feature.jpg": {
+	"\/_site\/assets\/crooked\/feature.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 256849,
-		"inputAbbreviatedPath": "\/_site\/assets\/Crooked\/feature.jpg",
-		"outputAbbreviatedPath": "\/_site\/assets\/Crooked\/feature.jpg",
+		"initialSize": 266538,
+		"inputAbbreviatedPath": "\/_site\/assets\/crooked\/feature.jpg",
+		"outputAbbreviatedPath": "\/_site\/assets\/crooked\/feature.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -498,13 +498,13 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/assets\/Crooked\/feature.jpg": {
+	"\/assets\/crooked\/feature.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 256849,
-		"inputAbbreviatedPath": "\/assets\/Crooked\/feature.jpg",
-		"outputAbbreviatedPath": "\/assets\/Crooked\/feature.jpg",
+		"inputAbbreviatedPath": "\/assets\/crooked\/feature.jpg",
+		"outputAbbreviatedPath": "\/assets\/crooked\/feature.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
